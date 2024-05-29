@@ -382,6 +382,22 @@ li{
 
 @media screen and (max-width:1007px){
 
+    @mixin btnPropert($color,$Colorhov,$backhov){
+        padding: 0.4rem .6rem;     
+        font-size: .8rem;
+    }
+
+    .btn{
+        @include btnPropert($primaryColor,$primaryColorhov,$primaryColorLight) ;
+      }
+    .btn-D{
+        @include btnPropert($redColor,$redhovColor,$redbackhovColor) ;
+        padding: .3rem;
+    }
+    .btn-R{
+        @include btnPropert($greenColor,$hov1Color,$back1Color) ;
+    }
+
     .Home{
         padding:1.2rem;
         height: auto;
@@ -392,10 +408,11 @@ li{
         
         .baner{
             width: 80%;
-            padding: 1rem;
+            padding: 1.5rem;
 
             table th,td{
                 font-size: .8rem;
+                padding: 0.3rem 0; 
             }
 
             

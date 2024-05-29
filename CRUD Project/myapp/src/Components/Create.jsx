@@ -31,9 +31,10 @@ function Create({
       : !PhoneErr
       ? toast.error("Enter your phone correctly")
       : Axios.post("users", Values)
-          .then(() => {
+          .then((Respons) => {
             toast.success("Added User");
             Navigate("/");
+            console.log(Respons);
           })
           .catch(() => toast.error("Err 404"));
   };
